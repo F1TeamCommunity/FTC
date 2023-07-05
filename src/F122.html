@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>F1 22 | F1 Team Community</title>
+</head>
+<body>
+    <!-- header -->
+    <section class="sub-header">
+        <nav>
+            <a href="../index.html"><img src="img/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon name="close-outline" class="ion close-icon" onclick="hideMenu()"></ion-icon>
+                <ul>
+                    <li><a href="../index.html">ACCUEIL</a></li>
+                    <li><a href="champ.html">CHAMPIONNATS</a></li>
+                    <li><a href="diffusion.html">DIFFUSION</a></li>
+                    <li><a href="commu.html">COMMUNAUTÉ</a></li>
+                    <li><a href="partenaire.html">PARTENAIRES</a></li>
+                </ul>
+            </div>
+            <ion-icon name="menu-outline" class="ion menu-icon" onclick="showMenu()"></ion-icon>
+        </nav>
+        <h1>F1 22</h1>
+    </section>
+
+    <!-- body -->
+    <section class="championnats">
+        <h1>Championnat F1 22</h1>
+        <p>
+            Ici vous allez retrouver les différents ligues organiser cette saison, une dernière ligue test sera
+            organiser pour préparer un Championnat sur F1 23.
+        </p>
+        <div class="diffusion-col">
+            <h3>Ligue test</h3>
+            <iframe src="https://www.youtube.com/embed/ET03P6AedA4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>
+                La ligue actuelle a été interrompu pour cause manque de pilotes dans la ligue et aussi la désynchronisation
+                des responsables. Plein de soucis sont régler ce qui améliore la qualité de notre ligue.
+                Vous retrouverez notre chaîne twitch en cliquant en dessous. <br>
+                Vous retrouverez aussi les réglementations et tout les changements.
+            </p>
+            <div class="button-c">
+                <a href="https://www.twitch.tv/f1_team_actu" target="_blank" class="community-btn">Twitch</a>
+                <a href="https://discord.gg/f1-team-community-tm-872208191432323143" target="_blank" class="community-btn">Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="icons">
+            <a href="https://twitter.com/f1teamactu"><ion-icon name="logo-twitter" class="fb"></ion-icon></a>
+            <a href="https://www.tiktok.com/@f1teamactu"><ion-icon name="logo-tiktok" class="fb"></ion-icon></a>
+            <a href="https://www.youtube.com/channel/UCwb3DU9xkYvvGnHlhyMwmWg"><ion-icon name="logo-youtube" class="fb"></ion-icon></a>
+        </div>
+        <p>Made by Zeikrom</p>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Javascript for toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.marginLeft = "0";
+        }
+        function hideMenu() {
+            navLinks.style.marginLeft = "-100%";
+        }
+    </script>
+
+    <!-- JavaScript Title change -->
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () =>{
+            document.title = "Revenez :(";
+        })
+        window.addEventListener("focus", () =>{
+            document.title = docTitle;
+        })
+    </script>
+
+    <!-- Script IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

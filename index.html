@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/img/logo.png">
+    <link rel="stylesheet" href="src/style.css">    
+    <title>Accueil | F1 Team Community</title>
+</head>
+<body>
+    <!-- Header -->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="src/img/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon name="close-outline" class="ion close-icon" onclick="hideMenu()"></ion-icon>
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="src/champ.html">CHAMPIONNATS</a></li>
+                    <li><a href="src/diffusion.html">DIFFUSION</a></li>
+                    <li><a href="src/commu.html">COMMUNAUTÉ</a></li>
+                    <li><a href="src/partenaire.html">PARTENAIRES</a></li>
+                </ul>               
+            </div>
+            <ion-icon name="menu-outline" class="ion menu-icon" onclick="showMenu()"></ion-icon>
+        </nav>
+        <div class="info">
+            <h1>F1 <span class="F1">Team Community</span></h1>
+            <p>Bienvenue sur notre site web, ici vous retrouverez plein d'information sur la <span class="multiText"></span></p>
+            <div class="button">
+                <a href="https://discord.gg/f1-team-community-tm-872208191432323143" target="_blank" class="hero-btn">Discord</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footers">
+            <div class="icons">
+                <a href="https://twitter.com/f1teamactu"><ion-icon name="logo-twitter" class="fa"></ion-icon></a>
+                <a href="https://www.tiktok.com/@f1teamactu"><ion-icon name="logo-tiktok" class="fa"></ion-icon></a>
+                <a href="https://www.youtube.com/channel/UCwb3DU9xkYvvGnHlhyMwmWg"><ion-icon name="logo-youtube" class="fa"></ion-icon></a>
+            </div>
+            <p>Made by Zeikrom</p>
+        </div>
+    </section>
+
+    
+    <!---- JavaScripts ---->
+    <!-- Javascript for toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.marginLeft = "0";
+        }
+        function hideMenu() {
+            navLinks.style.marginLeft = "-100%";
+        }
+    </script>
+
+
+    <!-- JavaScript Title change -->
+    <script>
+        let docTitle = document.title;
+        window.addEventListener("blur", () =>{
+            document.title = "Revenez :(";
+        })
+        window.addEventListener("focus", () =>{
+            document.title = docTitle;
+        })
+    </script>
+
+    <!-- JavaScript multiText -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typingEffect = new Typed(".multiText",{
+            strings : ["Diffusion","Compétition", "Communauté"],
+            loop : true,
+            typeSpeed : 90,
+            backSpeed : 80,
+            backDelay : 1500,
+        })
+    </script>
+
+    <!-- Script IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
