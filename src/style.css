@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
     background-size: cover;
     position: relative;
 }
-.header img {
+#logo {
     width: 150px;   /* LOGO */
     margin-top: 10px;
 }
@@ -425,6 +425,28 @@ iframe {
     border-radius: 10px;
 }
 
+.speedcoin1 {
+    width: 10px;
+    position: absolute;
+    right: 150px;
+    top: 95px;
+}
+.speedcoin2 {
+    width: 10px;
+    position: absolute;
+    left: 150px;
+}
+.speedcoin3 {
+    width: 10px;
+    position: absolute;
+    top: 380px;
+}
+.speedcoin4 {
+    width: 5px;
+    position: absolute;
+    top: 820px;
+}
+
 /***** Téléphone *****/
 @media(max-width: 700px) {
     /* Home header */
@@ -494,7 +516,7 @@ iframe {
         width: 100px;   /* LOGO */
         margin-top: 25px;
     }
-    .sub-header img {
+    #logo {
         width: 100px;
         margin-top: 25px;
     }
@@ -520,6 +542,22 @@ iframe {
     iframe {
         width: 300px;
         height: 200px;
+    }
+    .speedcoin1 {
+        width: 10px;
+        position: absolute;
+        right: -4px;
+        top: 95px;
+    }
+    .speedcoin2 {
+        width: 10px;
+        position: absolute;
+    }
+    .speedcoin3 {
+        width: 6px;
+        position: absolute;
+        left: 300px;
+        top: 345px;
     }
 }
 
