@@ -512,7 +512,7 @@ iframe {
     .info p {
         text-align: center;
     }
-    .header img {
+    #logo {
         width: 100px;   /* LOGO */
         margin-top: 25px;
     }
@@ -544,10 +544,9 @@ iframe {
         height: 200px;
     }
     .speedcoin1 {
-        width: 10px;
+        width: 5px;
         position: absolute;
-        right: -4px;
-        top: 95px;
+        top: 150px;
     }
     .speedcoin2 {
         width: 10px;
