@@ -295,6 +295,11 @@ iframe {
     font-size: 60px;
     font-family: 'neue_plakcompressedXBlk';
 }
+.community h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'neue_plakcompressedXBlk';
+}
 .community p {
     color: #414141;
     font-size: 28px;
@@ -317,6 +322,36 @@ iframe {
     color: white;
     transition: 0.5s;
 }
+
+#countdown {
+    font-family: 'neue_plakcompressedXBlk';
+    font-size: 36px;
+    margin: 20px;
+}
+
+#imageContainer {
+    display: none;
+}
+
+#resetButton {
+    display: none;
+    font-size: 20px;
+    text-decoration: none;
+    color: #414141;
+    border: 1px solid #414141;
+    border-radius: 11px;
+    padding: 12px 34px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#resetButton:hover {
+    border: 1px solid white;
+    background: #414141;
+    color: white;
+    transition: 0.5s;
+}
+
 .bold {
     font-family: 'neue_plakcompressedXBlk';
 } 
