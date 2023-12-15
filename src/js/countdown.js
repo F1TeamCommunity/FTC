@@ -1,28 +1,38 @@
 // Fonction pour démarrer ou reprendre le compte à rebours
-function startOrResumeCountdown(endDate, displayElement, imageContainer) {
-    const countdown = setInterval(function () {
-      const now = new Date().getTime();
-      const distance = endDate - now;
+function startOrResumeCountdown(endDate, displayElement, imageContainer, imageDiv) {
+  const countdown = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = endDate - now;
 
-      if (distance <= 0) {
-        clearInterval(countdown);
-        displayElement.style.display = 'none';
-        imageContainer.style.display = 'block';
-      } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance <= 0) {
+      clearInterval(countdown);
+      displayElement.style.display = 'none';
 
-        displayElement.textContent = `${days} jours ${hours} heures ${minutes} minutes ${seconds} secondes`;
-      }
-    }, 1000);
-  }
+      // Afficher le div avec l'image
+      imageDiv.style.display = 'block';
 
-  // Date prédéfinie pour le compte à rebours (remplacez par votre date)
-  const targetDate = new Date('2023-12-15T15:29:59').getTime();
+      // Charger l'image de manière dynamique après le compte à rebours
+      const imageElement = new Image();
+      imageElement.src = './img/chasseautresor.jpg'; // Remplacez par le chemin de votre image
 
-  // Démarrer le compte à rebours
-  const countdownElement = document.getElementById('countdown');
-  const imageContainer = document.getElementById('imageContainer');
-  startOrResumeCountdown(targetDate, countdownElement, imageContainer);
+      // Ajouter l'image au div
+      imageDiv.appendChild(imageElement);
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      displayElement.textContent = `${days} jours ${hours} heures ${minutes} minutes ${seconds} secondes`;
+    }
+  }, 1000);
+}
+
+// Date prédéfinie pour le compte à rebours (remplacez par votre date)
+const targetDate = new Date('2023-12-22T19:29:59').getTime();
+
+// Démarrer le compte à rebours
+const countdownElement = document.getElementById('countdown');
+const imageContainer = document.getElementById('imageContainer');
+const imageDiv = document.getElementById('imageDiv');
+startOrResumeCountdown(targetDate, countdownElement, imageContainer, imageDiv);

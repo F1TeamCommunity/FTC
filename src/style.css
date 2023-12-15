@@ -333,6 +333,15 @@ iframe {
     display: none;
 }
 
+#imageDiv {
+    display: none;
+}
+
+#imageDiv img {
+    width: 300px;
+    height: auto;
+}
+
 #resetButton {
     display: none;
     font-size: 20px;
