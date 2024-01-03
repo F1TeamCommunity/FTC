@@ -1,8 +1,8 @@
 // Fonction pour démarrer ou reprendre le compte à rebours
-function startOrResumeCountdown(endDate, displayElement, imageContainer, imageDiv) {
+function startOrResumeCountdown(displayElement, imageContainer, imageDiv) {
   const countdown = setInterval(function () {
     const now = new Date().getTime();
-    const distance = endDate - now;
+    const distance = targetDate - now;
 
     if (distance <= 0) {
       clearInterval(countdown);
