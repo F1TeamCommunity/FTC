@@ -29,7 +29,7 @@ function startOrResumeCountdown(endDate, displayElement, imageContainer, imageDi
 }
 
 // Date prédéfinie pour le compte à rebours (remplacez par votre date)
-const targetDate = new Date('2023-12-22T19:29:59').getTime();
+const targetDate = new Date('2024-1-12T19:29:59').getTime();
 
 // Démarrer le compte à rebours
 const countdownElement = document.getElementById('countdown');
